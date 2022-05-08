@@ -33,4 +33,4 @@ function getGitHubProfileInfos() {
     })
 }
 getGitHubProfileInfos()
-//chageSocialMediaLinks()
+chageSocialMediaLinks()
