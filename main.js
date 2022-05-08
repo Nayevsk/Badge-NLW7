@@ -1,6 +1,6 @@
 const LinkSocialMedia = {
-  github: 'jakeliny',
-  instagram: 'jakeliny.gracielly',
+  github: 'nayevsk',
+  instagram: 'lucasnayevsk',
   facebook: 'maykbrito',
   twitter: 'jakelinytec',
   youtube: 'jakelinygracielly'
