@@ -1,0 +1,89 @@
+*{
+  margin: 0;
+}
+
+html,
+body {
+  /* Deseja mostrar os items selecionados em 100% da tela*/
+  height: 100%;
+  /* usa a fonte roboto, se nao achar usa-se sans-serif(signigica sem detalhes nas letras)*/
+  font-family: 'roboto', sans-serif;
+  /*font-smoothing vai funcionar no webkit(safari, mozila)*/
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  --black: hsl(240, 6%, 13%);
+  --grey: hsl(240, 9%, 89%, 1); /* -- significa a ciracao de uma variavel (nocaso grey) */
+
+  display: grid;
+  place-items: center;
+}
+
+main {
+background: url(images/background.svg);
+width: 375px;
+height: 812px;
+text-align: center;
+}
+
+.container {
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /*relative pode receber elementos com position absolute (.avatar span sera referente a .avatar)*/
+}
+
+.avatar span {
+  position: absolute;
+  top: -15px;
+  z-index: 1; /*Sobe um nivel na profundidade (necessario apos a adicao deo clip-path, pois este subiu um nivel da foto)*/
+}
+
+.avatar > img { /* Seleciona a img mais externa na hierarquia (img dentro do span esta um nivel abaixo da que nao esta) */
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /* Reajusta toda a imagem para q esta fique com resolucoes proporcionais*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: hsla(240, 9%, 89%, 1);
+  margin-top: 1.5rem;
+}
+
+a {
+  color: var(--grey);
+  text-decoration: none;
+  
+  margin-top: 0.25rem;
+  
+  display:  flex;
+  gap: 0.75rem;
+
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-top: 2rem;
+}
+
+ul {
+  margin-top: 4rem;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex; /* deixa todos os elemento um ao lado do outro*/
+  gap: 0.5rem;
+
+  justify-content: center; /*text-align nao foi usado pois ele so funciona para textos*/
+}
